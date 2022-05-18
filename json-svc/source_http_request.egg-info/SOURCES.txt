@@ -1,0 +1,17 @@
+README.md
+setup.py
+integration_tests/__init__.py
+integration_tests/abnormal_state.json
+integration_tests/acceptance.py
+integration_tests/configured_catalog.json
+integration_tests/invalid_config.json
+integration_tests/sample_config.json
+integration_tests/sample_state.json
+source_http_request/__init__.py
+source_http_request/source.py
+source_http_request/spec.yaml
+source_http_request.egg-info/PKG-INFO
+source_http_request.egg-info/SOURCES.txt
+source_http_request.egg-info/dependency_links.txt
+source_http_request.egg-info/requires.txt
+source_http_request.egg-info/top_level.txt

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "documentationUrl": "https://docs.faros.ai",
+  "connectionSpecification": {
+    "title": "Http Request Spec",
+    "type": "object",
+    "required": [
+      "server_url"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "server_url": {
+        "type": "string",
+        "title": "Target url",
+        "examples": [
+          "https://my-jenkins-server.example.com"
+        ]
+      },
+      "resultSelector":{
+        "type": "string",
+        "title": "jsonata result query"
+      },
+      "name": {
+        "type": "string",
+        "title": "Collection name"
+      },
+      "token": {
+        "type": "string",
+        "title": "Security Token",
+        "airbyte_secret": true
+      },
+      "tokenHeader": {
+        "type": "string",
+        "title": "Api token header"
+      },
+      "sampleSettings": {
+        "type": "object",
+        "properties": {
+          "paramPlacement": {
+            "oneOf": [
+              {
+                "type": "object",
+                "title": "Query",
+                "properties": {
+                  "placement": {
+                    "type": "string",
+                    "title": "Placement",
+                    "const": "QUERY",
+                    "description": "Place the sample filter in the query"
+                  },
+                  "parameter": {
+                    "type": "string",
+                    "title": "A json dictionary of values to pass to configure the sample request"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
